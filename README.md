@@ -93,25 +93,6 @@ Focus:        Building functional admin panels and internal tools
 
 ---
 
-## 📝 My Engineering Philosophy
-
-**On Shipping:**
-> "Completed and deployed is better than perfect but unshipped. Quality means including proper logging, error handling, and deployment plans."
-
-**On Learning:**
-> "Build things, learn from what breaks, fix them thoughtfully, and document the lessons for yourself and others."
-
-**On Code Quality:**
-> "Simple, maintainable systems tend to outlast complex ones. Clear code is easier to debug and extend."
-
-**On Problem-Solving:**
-> "Start with logs and metrics rather than assumptions. Reproducible issues are much easier to fix."
-
-**On Responsibility:**
-> "When something breaks in production, focus on understanding what went wrong in the system and how to prevent it in the future."
-
----
-
 ## 💼 Professional Experience at PragyaCyber Ltd
 
 I work as a Fullstack Engineer Intern, handling both development and operational responsibilities:
@@ -135,13 +116,6 @@ I work as a Fullstack Engineer Intern, handling both development and operational
 - Database indexing strategies and query optimization
 - Best practices for containerized deployments
 - Debugging techniques for distributed systems
-
-**Happy to discuss:**
-- API design patterns and best practices
-- MongoDB optimization techniques
-- Docker deployment strategies
-- General system architecture questions
-
 ---
 
 ## 📊 GitHub Activity
