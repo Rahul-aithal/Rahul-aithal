@@ -37,8 +37,6 @@ Hey there! I'm an engineering student and fullstack developer passionate about *
 
 **The Challenge:** Extracting video frames at specific timestamps shouldn't require complex GUI tools or stitching together shell commands.
 
-**My Solution:** A straightforward Go CLI that handles frame extraction using FFmpeg, with clean error handling and intuitive usage.
-
 **Project Status:**
 - ✅ **Phase 1:** CLI-based frame extraction with timestamp parsing
 - 🚧 **Phase 2:** Building a web UI for frame comparison and selection
@@ -54,14 +52,6 @@ Hey there! I'm an engineering student and fullstack developer passionate about *
     <img src="https://img.shields.io/badge/Read%20Build%20Log-Medium-12100E?style=for-the-badge&logo=medium" />
   </a>
 </p>
-
-**Key Learnings:**
-- Understanding Go slices and how they differ from arrays
-- Working with FFmpeg's command-line interface
-- Appreciating Go's explicit error handling approach
-- The value of building a solid CLI before adding UI features
-
-**Why Document It?** I'm writing about the entire development process on Medium — including the challenges and unexpected bugs — because I believe real learning experiences are more valuable than polished tutorials.
 
 ---
 
