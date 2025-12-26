@@ -44,7 +44,7 @@ Hey there! I'm an engineering student and fullstack developer passionate about *
 - 🚧 **Phase 2:** Building a web UI for frame comparison and selection
 - 📋 **Phase 3:** Planning concurrent processing and smart frame analysis
 
-**Tech Stack:** `Go 1.21+` `FFmpeg` `CLI` (Phase 2 will use Gin or Fyne)
+**Tech Stack:** `Go 1.21+` `FFmpeg` `CLI` (Phase 2 will use chi and pg)
 
 <p align="left">
   <a href="https://github.com/Rahul-aithal/ThumbPicker">
