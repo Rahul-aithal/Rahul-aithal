@@ -120,10 +120,7 @@ I work as a Fullstack Engineer Intern, handling both development and operational
 
 ## 📊 GitHub Activity
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Rahul-aithal&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
-
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Rahul-aithal&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 ---
 
 ## 🧠 Building and Writing in Public
