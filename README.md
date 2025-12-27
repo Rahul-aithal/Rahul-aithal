@@ -3,46 +3,27 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Rahul-Aithal&fontSize=42&fontColor=ffffff&animation=fadeIn" />
 </p>
 
-<h1 align="center">Backend Engineer • Systems Builder • Learning in Public</h1>
+<h1 align="center">Backend Engineer • Systems Builder</h1>
 
 <p align="center">
-  <i>"Building real systems. Documenting the journey. Shipping code that matters."</i>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Building-ThumbPicker-2c5364?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Writing-Medium-203a43?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-Backend%20%2B%20Infra-0f2027?style=for-the-badge" />
+  <i>Building production systems. Writing about the journey. Shipping code that matters.</i>
 </p>
 
 ---
 
 ## 👨‍💻 About Me
 
-Hey there! I'm an engineering student and fullstack developer passionate about **building in public and documenting what I learn along the way.**
+Fullstack Engineer Intern at **PragyaCyber Ltd** working on production systems with Node.js, NestJS, MongoDB, and AWS. Currently learning **Go** and building **[ThumbPicker](https://github.com/Rahul-aithal/ThumbPicker)** — a video frame extraction tool. I document what I build on **[Medium](https://medium.com/@aithalrahul34)**.
 
-**Currently:** Fullstack Engineer Intern at PragyaCyber Ltd, where I work on production systems and learn what building at scale really means.
-
-**Side Project:** [ThumbPicker](https://github.com/Rahul-aithal/ThumbPicker) — a video frame extraction tool built with Go. What started as a learning project is growing into something I hope others will find useful too.
-
-**What I believe in:**
-- Building systems that work reliably in production
-- Sharing both successes and mistakes openly (check out my [Medium](https://medium.com/@aithalrahul34))
-- Taking ownership of projects from design to deployment
-- Learning through real-world problems
+**What drives me:** Building reliable systems, learning in public, and taking projects from design to deployment.
 
 ---
 
 ## 🔥 Featured Project: ThumbPicker
 
-**The Challenge:** Extracting video frames at specific timestamps shouldn't require complex GUI tools or stitching together shell commands.
+A CLI tool for extracting video frames at specific timestamps, built with **Go + FFmpeg**. What started as a learning project is growing into a practical tool for video processing workflows.
 
-**Project Status:**
-- ✅ **Phase 1:** CLI-based frame extraction with timestamp parsing
-- 🚧 **Phase 2:** Building a web UI for frame comparison and selection
-- 📋 **Phase 3:** Planning concurrent processing and smart frame analysis
-
-**Tech Stack:** `Go 1.21+` `FFmpeg` `CLI` (Phase 2 will use chi and pg)
+**Status:** ✅ CLI working • 🚧 Building web UI • 📋 Planning concurrent processing
 
 <p align="left">
   <a href="https://github.com/Rahul-aithal/ThumbPicker">
@@ -55,124 +36,43 @@ Hey there! I'm an engineering student and fullstack developer passionate about *
 
 ---
 
-## ⚙️ Technologies I Work With
+## 🛠️ Tech Stack
 
-### Backend & Languages
-```
-Primary:      Node.js, Bun, NestJS, Express
-Learning:     Go (exploring concurrency and system programming)
-Languages:    TypeScript/JavaScript
-```
+<p align="left">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+</p>
 
-### Data & Storage
-```
-Databases:    PostgreSQL, MongoDB, Redis
-ORMs/ODMs:    Prisma, Mongoose
-Caching:      Redis for caching and pub/sub patterns
-```
+**Currently exploring:** Go concurrency patterns • System design • Performance optimization
 
-### Infrastructure & DevOps
-```
-Cloud:        AWS (EC2, S3, RDS)
-Containers:   Docker, Docker Compose
-Web Server:   Nginx
-Automation:   n8n workflows, GitHub Actions
-OS:           Linux (Ubuntu)
-```
-
-### Frontend Development
-```
-Stack:        React, Vite, Tailwind CSS
-Focus:        Building functional admin panels and internal tools
-```
-
-### Currently Exploring
-- **Go programming:** Concurrency patterns with goroutines and channels
-- **System design:** Understanding distributed systems and consistency models
-- **Performance optimization:** Learning profiling and benchmarking techniques
-
----
-
-## 💼 Professional Experience at PragyaCyber Ltd
-
-I work as a Fullstack Engineer Intern, handling both development and operational responsibilities:
-
-**What I Do:**
-- Build and maintain fullstack features for production applications
-- Design REST APIs and MongoDB database schemas
-- Debug and resolve production issues
-- Implement automation workflows using n8n
-- Work with Docker and AWS for deployment
-
-**Technologies in Use:**
-- **Frontend:** Vite + React for building user interfaces
-- **Backend:** Node.js/NestJS for building APIs
-- **Database:** MongoDB with a focus on query optimization
-- **Automation:** n8n for workflow automation
-- **Infrastructure:** Docker containers deployed on AWS
-
-**What I'm Learning:**
-- Optimizing API performance for production workloads
-- Database indexing strategies and query optimization
-- Best practices for containerized deployments
-- Debugging techniques for distributed systems
 ---
 
 ## 📊 GitHub Activity
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Rahul-aithal&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
----
-
-## 🧠 Building and Writing in Public
-
-I share my development journey on **[Medium](https://medium.com/@aithalrahul34)**, writing about projects, challenges, and solutions.
-
-**Recent Articles:**
-- [**ThumbPicker Part 1:**](https://medium.com/@aithalrahul34) Building a video frame extraction tool with Go — documenting the learning process, challenges faced, and solutions found
-- *(More articles coming as the project progresses)*
-
-**Why I Write Publicly:**
-- It helps me solidify my understanding by explaining concepts clearly
-- Others can learn from both my successes and mistakes
-- It creates a record of my learning journey
-- It keeps me accountable to completing what I start
-
-**Upcoming Content:**
-- ThumbPicker Phase 2: Building the web interface
-- Deep dive into Go concurrency patterns
-- Lessons learned from production debugging
-
-<p align="left">
-  <a href="https://medium.com/@aithalrahul34">
-    <img src="https://img.shields.io/badge/Follow%20on%20Medium-12100E?style=for-the-badge&logo=medium" />
-  </a>
+<p align="center">
+  <img src="http://github-readme-streak-stats.herokuapp.com?user=Rahul-aithal&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
 
-## 🎯 Looking Ahead
+## 🎯 What I'm Working On
 
-**Short-Term Goals:**
-- Complete ThumbPicker Phase 2 (web UI for frame comparison)
-- Contribute to open-source Go projects
-- Continue writing technical articles on Medium
-
-**Long-Term Vision:**
-- Build more practical tools that solve real problems
-- Deepen my understanding of distributed systems
-- Possibly start creating video content about software development
-
-**Open To:**
-- Interesting technical challenges and projects
-- Open-source collaboration opportunities
-- Contract or freelance work on backend systems
-- Conversations about software architecture and engineering best practices
+- 🚀 Completing ThumbPicker Phase 2 (web UI)
+- 📝 Writing technical articles on Medium
+- 🤝 Open to open-source contributions and backend projects
+- 🧠 Deepening knowledge in distributed systems
 
 ---
 
 ## 📫 Let's Connect
-
-I'm always happy to discuss technology, collaborate on projects, or just chat about software engineering!
 
 <p align="center">
   <a href="https://github.com/Rahul-aithal">
@@ -195,8 +95,6 @@ I'm always happy to discuss technology, collaborate on projects, or just chat ab
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer"/>
 </p>
 
----
-
 <p align="center">
-  <sub>Built with care. Maintained with dedication. Shared with the community.</sub>
+  <sub>Building in public. Learning in public. Shipping in public.</sub>
 </p>
