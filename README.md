@@ -1,7 +1,3 @@
-<!-- PROFILE BANNER -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Rahul-Aithal&fontSize=42&fontColor=ffffff&animation=fadeIn" />
-</p>
 
 <h1 align="center">Backend Engineer • Systems Builder</h1>
 
@@ -13,7 +9,7 @@
 
 ## 👨‍💻 About Me
 
-Fullstack Engineer Intern at **PragyaCyber Ltd** working on production systems with Node.js, NestJS, MongoDB, and AWS. Currently learning **Go** and building **[ThumbPicker](https://github.com/Rahul-aithal/ThumbPicker)** — a video frame extraction tool. I document what I build on **[Medium](https://medium.com/@aithalrahul34)**.
+Fullstack Intern working on production systems with Node.js, NestJS, MongoDB, and AWS. Currently learning **Go** and building **[ThumbPicker](https://github.com/Rahul-aithal/ThumbPicker)** — a video frame extraction tool. I document what I build on **[Medium](https://medium.com/@aithalrahul34)**.
 
 **What drives me:** Building reliable systems, learning in public, and taking projects from design to deployment.
 
@@ -53,24 +49,6 @@ A CLI tool for extracting video frames at specific timestamps, built with **Go +
 
 **Currently exploring:** Go concurrency patterns • System design • Performance optimization
 
----
-
-## 📊 GitHub Activity
-
-<p align="center">
-  <img src="http://github-readme-streak-stats.herokuapp.com?user=Rahul-aithal&theme=tokyonight&hide_border=true" />
-</p>
-
----
-
-## 🎯 What I'm Working On
-
-- 🚀 Completing ThumbPicker Phase 2 (web UI)
-- 📝 Writing technical articles on Medium
-- 🤝 Open to open-source contributions and backend projects
-- 🧠 Deepening knowledge in distributed systems
-
----
 
 ## 📫 Let's Connect
 
