@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rahul Aithal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:     #0a0a0a;
+    --bg2:    #111111;
+    --bg3:    #1a1a1a;
+    --green:  #00ff41;
+    --amber:  #ffb000;
+    --white:  #e8e8e8;
+    --dim:    #666666;
+    --dimmer: #333333;
+    --border: #2a2a2a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* scanlines */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 2px,
+      rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* grain */
+  body::after {
+    content: '';
+    position: fixed; inset: -200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.4;
+    animation: grain 0.5s steps(1) infinite;
+  }
+
+  @keyframes grain {
+    0%,100%{transform:translate(0,0)}   10%{transform:translate(-1%,-1%)}
+    20%{transform:translate(1%,1%)}     30%{transform:translate(-2%,0)}
+    40%{transform:translate(2%,-1%)}    50%{transform:translate(-1%,2%)}
+    60%{transform:translate(1%,-2%)}    70%{transform:translate(2%,1%)}
+    80%{transform:translate(-2%,2%)}    90%{transform:translate(0,-2%)}
+  }
+
+  /* ── Topbar ── */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.1em;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+  }
+
+  .topbar-id { color: var(--amber); font-weight: 600; }
+
+  .status-dot {
+    display: inline-block; width: 6px; height: 6px;
+    background: var(--green); border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+    margin-right: 6px;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--dim);
+    margin-bottom: 16px;
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    line-height: 1.0;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .hero-name span { color: var(--amber); }
+
+  .cursor {
+    display: inline-block; width: 3px; height: 0.8em;
+    background: var(--amber); margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+  }
+
+  .hero-role {
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+  }
+
+  .hero-role em { color: var(--green); font-style: normal; }
+
+  /* bio uses IBM Plex Sans for readability */
+  .hero-bio {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #888;
+    max-width: 600px;
+    border-left: 2px solid var(--amber);
+    padding-left: 20px;
+  }
+
+  .hero-bio strong {
+    color: #bbb;
+    font-weight: 400;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--dimmer);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .hero-links a:hover {
+    color: var(--amber);
+    border-color: var(--amber);
+  }
+
+  /* ── Section ── */
+  .section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-num  { font-size: 10px; color: var(--amber); letter-spacing: 0.15em; }
+  .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ── Currently ── */
+  .currently {
+    border-left: 1px solid var(--border);
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .curr-item { display: flex; gap: 14px; align-items: baseline; }
+
+  .curr-arrow {
+    font-size: 10px;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+
+  .curr-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  .curr-text strong { color: #aaa; font-weight: 400; }
+
+  /* ── Projects ── */
+  .project-card {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 28px 32px;
+    margin-bottom: 2px;
+    transition: border-color 0.15s, background 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::after {
+    content: attr(data-num);
+    position: absolute;
+    right: 28px; top: 20px;
+    font-size: 52px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.2s;
+  }
+
+  .project-card:hover { border-color: #3a3a3a; background: #131313; }
+  .project-card:hover::after { color: #1f1f1f; }
+
+  .project-top {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+
+  .project-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .project-links a {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    text-decoration: none;
+    transition: opacity 0.15s, border-color 0.15s;
+    text-transform: uppercase;
+    opacity: 0.7;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+
+  .project-links a:hover { opacity: 1; border-color: var(--amber); }
+
+  /* story text — readable sans */
+  .project-story {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 13.5px;
+    color: #5a5a5a;
+    line-height: 1.8;
+    max-width: 540px;
+  }
+
+  .project-story strong {
+    color: #888;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  /* ── Socials ── */
+  .socials { display: flex; flex-direction: column; }
+
+  .social-row {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    transition: padding-left 0.15s;
+  }
+
+  .social-row:first-child { border-top: 1px solid var(--border); }
+  .social-row:hover { padding-left: 8px; }
+
+  .social-platform {
+    font-size: 10px;
+    color: var(--dimmer);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    width: 100px;
+    flex-shrink: 0;
+  }
+
+  .social-handle {
+    font-size: 13px;
+    color: var(--dim);
+    transition: color 0.15s;
+  }
+
+  .social-row:hover .social-handle { color: var(--amber); }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 40px 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--dimmer);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Fade in ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+  .fade-in:nth-child(1){animation-delay:0.05s}
+  .fade-in:nth-child(2){animation-delay:0.10s}
+  .fade-in:nth-child(3){animation-delay:0.15s}
+  .fade-in:nth-child(4){animation-delay:0.20s}
+  .fade-in:nth-child(5){animation-delay:0.25s}
+
+  @media(max-width:600px){
+    .container { padding: 0 20px 60px; }
+    .topbar { padding: 10px 20px; }
+    .hero { padding: 40px 0 32px; }
+    .hero-name { font-size: 36px; }
+    .project-card::after { display: none; }
+    .project-top { flex-direction: column; gap: 6px; }
+    .footer { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div style="display:flex;gap:24px;align-items:center">
+    <span class="topbar-id">Rahul-aithal</span>
+    <span>BENGALURU / IN</span>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center">
+    <span><span class="status-dot"></span>AVAILABLE</span>
+    <span id="clock"></span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-label">// IDENTIFICATION</div>
+    <h1 class="hero-name">RAHUL<br><span>AITHAL</span><span class="cursor"></span></h1>
+    <div class="hero-role">FULLSTACK DEVELOPER &nbsp;·&nbsp; <em>SYSTEMS BUILDER</em> &nbsp;·&nbsp; BENGALURU</div>
+    <p class="hero-bio">
+      Third-year CS student who builds things to understand how they work. 
+      Backend systems, full-stack products, the occasional low-level rabbit hole. 
+      Currently interning, <strong>learning Go properly</strong>, and getting 
+      pulled into AI tooling whether I planned to or not.
+    </p>
+    <div class="hero-links">
+      <a href="https://github.com/Rahul-aithal" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rahul-aithal-b67b5b253/" target="_blank">LinkedIn</a>
+      <a href="https://medium.com/@aithalrahul34" target="_blank">Medium</a>
+      <a href="mailto:aithalrahul34@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <!-- Currently -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Currently</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="currently">
+      <div class="curr-item">
+        <span class="curr-arrow">→</span>
+        <span class="curr-text">Interning at a cybersecurity firm — building a <strong>B2B SaaS platform</strong> end to end. First time something I wrote is used by real people in production.</span>
+      </div>
+      <div class="curr-item">
+        <span class="curr-arrow">→</span>
+        <span class="curr-text">Going deeper into <strong>Go</strong> — concurrency, the runtime, why it makes systems people so happy.</span>
+      </div>
+      <div class="curr-item">
+        <span class="curr-arrow">→</span>
+        <span class="curr-text">Learning <strong>AI/LLM tooling</strong> for work — MCP servers, agents, how you wire this into a real product without it falling apart.</span>
+      </div>
+      <div class="curr-item">
+        <span class="curr-arrow">→</span>
+        <span class="curr-text">Writing on <strong>Medium</strong> when I have something worth saying.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Things I've Built</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="project-card fade-in" data-num="01">
+      <div class="project-top">
+        <span class="project-name">InkWell</span>
+      </div>
+      <p class="project-story">
+        Wanted to understand how real-time systems work, so I built a blogging platform around it. 
+        <strong>RabbitMQ for async notifications</strong>, Cloudinary for media, JWT auth — the kind 
+        of project where you keep pulling one thread and end up building a lot more than you planned.
+      </p>
+      <div class="project-links">
+        <a href="https://ink-well-client.vercel.app/" target="_blank">open ↗</a>
+        <a href="https://github.com/Rahul-aithal/Ink-well-client" target="_blank">code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in" data-num="02">
+      <div class="project-top">
+        <span class="project-name">HashVault LMS</span>
+      </div>
+      <p class="project-story">
+        Got curious about how video streaming actually works. Built an LMS from scratch — 
+        <strong>HLS adaptive streaming</strong>, Redis caching, proper auth. The interesting 
+        part was making it hold up under concurrent load without things quietly breaking.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/Rahul-aithal/Ink-well-server" target="_blank">code ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-in" data-num="03">
+      <div class="project-top">
+        <span class="project-name">ThumbPicker</span>
+      </div>
+      <p class="project-story">
+        My first real Go project. Wraps FFmpeg to pull frames out of video files from the 
+        command line. Simple enough to finish, complex enough to teach me something. Now adding 
+        <strong>goroutines</strong> for batch processing — really just an excuse to learn Go's 
+        concurrency model properly.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/Rahul-aithal/ThumbPicker" target="_blank">code ↗</a>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="footer">
+    <span>© 2025 RAHUL AITHAL</span>
+    <span>BNMIT CSE · 8.9 CGPA</span>
+  </div>
+
+</div>
+
+<script>
+  function tick() {
+    const t = new Date().toLocaleTimeString('en-GB', {
+      hour:'2-digit', minute:'2-digit', second:'2-digit', timeZone:'Asia/Kolkata'
+    });
+    document.getElementById('clock').textContent = t + ' IST';
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+</body>
+</html>
