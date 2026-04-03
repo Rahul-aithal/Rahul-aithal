@@ -7,7 +7,7 @@
 
 ### 👨‍💻 About Me
 **Fullstack Intern** @ Praya Cyber Ltd.  
-Working with Node.js, NestJS, MongoDB & AWS on production systems. Learning **Go** and building **[ThumbPicker](https://github.com/Rahul-aithal/ThumbPicker)** — a video frame extraction tool. Writing on **[Medium](https://medium.com/@aithalrahul34)**.
+Working with Node.js, NestJS, MongoDB & AWS on production systems. Learning **Go**.
 
 **Focus:** Reliable systems • Learning in public • Design to deployment
 
