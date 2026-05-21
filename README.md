@@ -6,8 +6,7 @@
 <td width="50%" valign="top">
 
 ### 👨‍💻 About Me
-**Fullstack Intern** @ Praya Cyber Ltd.  
-Working with Node.js, NestJS, MongoDB & AWS on production systems. Learning **Go**.
+Learning **Go**.
 
 **Focus:** Reliable systems • Learning in public • Design to deployment
 
